@@ -38,7 +38,10 @@ app.get("/", async (_, res) => {
 });
 
 app.get("/protected", authenticatedJWT, (req,res) => {
-  res.send("protected");
+  res.status(200).json({
+    message: "This is a protected route",
+    profile: req.user
+  });
 })
 
 app.post("/upload", singleImageUpload, uploadToGcs, async (req, res) => {  

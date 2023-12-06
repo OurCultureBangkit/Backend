@@ -27,7 +27,7 @@ const uploadToGcs = (req, res, next) => {
     return new Promise((resolve, reject) => {
       const uniqueId = nanoid(6);
       const fileName =
-        req.user.user.username +
+        req.user.username +
         '-' +
         Date.now() +
         '-' +

@@ -4,7 +4,8 @@ const Comment = require("../../models/comments");
 const postCommentByBarangId = async (req, res) => {
   try {
     const { id } = req.params;
-    const { userId, comment, rating } = req.body;
+    const { comment, rating } = req.body;
+    const { id: userId } = req.user;
 
     const { files } = req;
     const images = files ? files.map((file) => file.cloudStoragePublicUrl) : null;
@@ -41,14 +42,31 @@ const getCommentByBarangId = async (req, res) => {
       offset: parseInt(offset),
       include: [{
         model: User,
-        attributes: ['username'],
+        attributes: ['username', 'avatar'],
       }],
     })
     
     const totalPages = Math.ceil(result.count / limit);
 
+    if(result.rows.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        message: "No comment found",
+      });
+    }
+
+    const comments = result.rows.map((comment) => {
+      return {
+        id: comment.id,
+        comment: comment.comment,
+        rating: comment.rating,
+        images: JSON.parse(comment.image),
+        postBy: comment.user,
+      }
+    });
+    
     res.status(200).json({
-      data: result.rows,
+      commments: comments,
       totalItems: result.count,
       totalPages,
       currentPage: parseInt(page),

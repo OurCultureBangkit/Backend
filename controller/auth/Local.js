@@ -7,7 +7,7 @@ const localLogin = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const user = await User.findOne({ where: { email: email } });
+    const user = await User.findOne({ where: { email: email }, attributes:{ exclude: ['userId'] } });
 
     if (!user) {
       return res.status(400).json({
@@ -28,22 +28,16 @@ const localLogin = async (req, res) => {
   
       const token = jwt.sign({ user }, process.env.SECRET_KEY, { expiresIn: '1d' });
       return res.status(200).json({ 
+        code: 200,
         status: 'success', 
         profile: {
           id: user.id,
           username: user.username,
           email: user.email,
           avatar: user.avatar,
-          role: user.role,
+          role: user.roles,
         },
         access_token: token 
-      });
-    }
-
-    if (user.googleId) {
-      return res.status(400).json({
-        status: 'error',
-        message: 'You have to login with Google',
       });
     }
 
@@ -66,7 +60,7 @@ const localRegister = async (req, res) => {
       });
     }
 
-    const existingUserByUsername = await User.findOne({ where: { username: username } });
+    const existingUserByUsername = await User.findOne({ where: { username: username }, attributes:{ exclude: ['userId'] } });
     if (existingUserByUsername) {
       return res.status(400).json({
         status: 'error',
@@ -74,7 +68,7 @@ const localRegister = async (req, res) => {
       });
     }
 
-    const existingUserByEmail = await User.findOne({ where: { email: email } });
+    const existingUserByEmail = await User.findOne({ where: { email: email }, attributes:{ exclude: ['userId'] } });
     if (existingUserByEmail) {
       return res.status(400).json({
         status: 'error',
@@ -83,6 +77,7 @@ const localRegister = async (req, res) => {
     }
 
     const hashedPassword = await hashPassword(password);
+
     const newUser = await User.create({ 
       username: username, 
       email: email, 
@@ -90,11 +85,13 @@ const localRegister = async (req, res) => {
     });
 
     return res.status(201).json({
+      code: 201,
       status: 'success',
       profile: {
         id: newUser.id,
         username: newUser.username,
         email: newUser.email,
+        role: newUser.roles,
       }
     });
 

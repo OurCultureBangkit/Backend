@@ -4,11 +4,26 @@ const User = require("./Users");
 const Barang = require("./barangs");
 
 const Comment = sequelize.define("comments", {
-  comment: DataTypes.TEXT,
-  rating: DataTypes.FLOAT,
-  image: DataTypes.JSON,
-  userId: DataTypes.INTEGER,
-  barangId: DataTypes.INTEGER,
+  comment: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  rating: {
+    type: DataTypes.FLOAT,
+    allowNull: false,
+  },
+  image: {
+    type: DataTypes.JSON,
+    allowNull: true,
+  },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  barangId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
 });
 
 Comment.belongsTo(User, { foreignKey: "userId" });

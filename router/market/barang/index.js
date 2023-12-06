@@ -8,10 +8,10 @@ const { uploadToGcs } = require('../../../middleware/FileUpload');
 const router = express();
 
 router.post("/barang", authenticatedJWT, singleImageUpload, uploadToGcs, postBarang);
-router.get("/barang", authenticatedJWT, getAllBarang);
-router.get("/barang/:id", authenticatedJWT, getBarangById);
+router.get("/barang", getAllBarang);
+router.get("/barang/:id", getBarangById);
 
-router.get("/barang/:id/comment", authenticatedJWT, getCommentByBarangId);
+router.get("/barang/:id/comment", getCommentByBarangId);
 router.post("/barang/:id/comment", authenticatedJWT, singleImageUpload, uploadToGcs, postCommentByBarangId);
 
 module.exports = router;

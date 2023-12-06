@@ -20,10 +20,10 @@ passport.use(new GoogleStrategy({
   },
   async function(accessToken, refreshToken, profile, done) {
     try {
-      let user = await User.findOne({ where: { googleId: profile.id } });
+      let user = await User.findOne({ where: { googleId: profile.id }, attributes: { exclude: ['userId'] }});
 
       if(!user){
-        const isEmailExist = await User.findOne({ where: { email: profile.email } });
+        const isEmailExist = await User.findOne({ where: { email: profile.email }, attributes: { exclude: ['userId'] }});
 
         if (isEmailExist) {
           await User.update({ googleId: profile.id, googleToken: accessToken }, { where: { email: profile.email } });
@@ -32,7 +32,7 @@ passport.use(new GoogleStrategy({
             await User.update({ avatar: profile.picture }, { where: { email: profile.email } });
           }
 
-          user = await User.findOne({ where: { email: profile.email } });
+          user = await User.findOne({ where: { email: profile.email }, attributes: { exclude: ['userId'] }});
   
           const token = jwt.sign({ user }, process.env.SECRET_KEY, { expiresIn: '1d' });
           return done(null, { user, token });
@@ -74,10 +74,10 @@ const googleLogin = async (req, res) => {
       avatar 
     } = req.body;
 
-    let user = await User.findOne({ where: { googleId: googleId } });
+    let user = await User.findOne({ where: { googleId: googleId }, attributes: { exclude: ['userId'] }});
     
     if(!user){
-      const isEmailExist = await User.findOne({ where: { email: email } });
+      const isEmailExist = await User.findOne({ where: { email: email }, attributes: { exclude: ['userId'] }});
 
       if(isEmailExist) {
         await User.update({ googleId: googleId, googleToken: googleToken }, { where: { email: email } });
@@ -89,7 +89,11 @@ const googleLogin = async (req, res) => {
         user = await User.findOne({ where: { email: email } });
 
         const token = jwt.sign({ user }, process.env.SECRET_KEY, { expiresIn: '1d' });
-        return res.status(200).json({ user, token });
+        return res.status(200).json({ 
+          code: 200,
+          profile: user, 
+          access_token: token
+        });
       }
 
       const newUser = await User.create({
@@ -101,13 +105,21 @@ const googleLogin = async (req, res) => {
       });
 
       const token = jwt.sign({ newUser }, process.env.SECRET_KEY, { expiresIn: '1d' });
-      return res.status(200).json({ newUser, token });
+      return res.status(200).json({ 
+        code: 200,
+        profile: newUser, 
+        access_token: token  
+      });
     }
     
     await user.update({ googleToken: googleToken });
 
     const token = jwt.sign({ user }, process.env.SECRET_KEY, { expiresIn: '1d' });
-    return res.status(200).json({ user, token });
+    return res.status(200).json({ 
+      code: 200,
+      profile: user, 
+      access_token: token 
+    });
 
   } catch (error) {
     return res.status(500).json({ 

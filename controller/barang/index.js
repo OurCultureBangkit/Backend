@@ -2,9 +2,10 @@ const User = require("../../models/Users");
 const Barang = require("../../models/barangs");
 
 const postBarang = async (req, res) => {
-  const { title, description, userId, harga, location } = req.body;
-  
+  const { title, description, harga, location, stock } = req.body;
+  const { id: userId } = req.user;
   const { files } = req;
+
   const images = files ? files.map((file) => file.cloudStoragePublicUrl) : null;
 
   const barang = await Barang.create({
@@ -13,10 +14,15 @@ const postBarang = async (req, res) => {
     userId: userId,
     harga: parseInt(harga),
     location: location,
-    image: images
+    image: images,
+    stock: parseInt(stock),
   });
 
-  res.status(200).json(barang);
+  res.status(201).json({
+    code: 201,
+    data: barang,
+    message: "Success post barang",
+  });
 }
 
 const getAllBarang = async (req, res) => {
@@ -29,14 +35,36 @@ const getAllBarang = async (req, res) => {
       offset: parseInt(offset),
       include: [{
         model: User,
-        attributes: ['username'],
+        attributes: ['username', 'id'],
       }],
     });
 
     const totalPages = Math.ceil(result.count / limit);
 
+    if(result.rows.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        message: "No barang found",
+      });
+    }
+
+    const barangs = result.rows.map((barang) => {
+      return {
+        id: barang.id,
+        title: barang.title,
+        description: barang.description,
+        harga: barang.harga,
+        location: barang.location,
+        stock: barang.stock,
+        images: JSON.parse(barang.image),
+        postBy: barang.user,
+      };
+    });
+
     res.status(200).json({
-      data: result.rows,
+      code: 200,
+      message: "Success get all barang",
+      barang: barangs,
       totalItems: result.count,
       totalPages,
       currentPage: parseInt(page),
@@ -44,7 +72,9 @@ const getAllBarang = async (req, res) => {
 
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    res.status(500).json({ 
+      error: 'Internal Server Error' 
+    });
   }
 };
 
@@ -56,12 +86,25 @@ const getBarangById = async (req, res) => {
       where: { id },
       include: [{
         model: User,
-        attributes: ['username'],
+        attributes: ['username', 'id'],
       }],
     });
 
+    const barangs = {
+      id: result.id,
+      title: result.title,
+      description: result.description,
+      harga: result.harga,
+      location: result.location,
+      stock: result.stock,
+      images: JSON.parse(result.image),
+      postBy: result.user,
+    };
+
     res.status(200).json({
-      data: result,
+      code: 200,
+      message: "Success get data barang",
+      barang: barangs,
       message: "Success get barang",
     });
 
