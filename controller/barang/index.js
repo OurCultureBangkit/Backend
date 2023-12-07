@@ -115,12 +115,12 @@ const getBarangById = async (req, res) => {
 
 const getMyPostBarang = async (req, res) => {
   try {
-    const { id } = req.user;
+    const { id: userId } = req.user;
     const { limit = 10, page = 1 } = req.query;
     const offset = (page - 1) * limit;
 
     const result = await Barang.findAndCountAll({
-      where: { userId: id },
+      where: { userId: userId },
       limit: parseInt(limit),
       offset: parseInt(offset),
       include: [{
