@@ -1,5 +1,6 @@
 const User = require("../../models/Users");
 const Comment = require("../../models/comments");
+const { CommentResponse } = require("../../modules/FormatResponse");
 
 const postCommentByBarangId = async (req, res) => {
   try {
@@ -37,14 +38,28 @@ const getCommentByBarangId = async (req, res) => {
     const { id } = req.params;
 
     const result = await Comment.findAndCountAll({
-      where: { barangId: id },
+      where: { barangId: id, commentId: null },
       limit: parseInt(limit),
       offset: parseInt(offset),
-      include: [{
-        model: User,
-        attributes: ['username', 'avatar'],
-      }],
-    })
+      attributes: ['id', 'comment', 'rating', 'image', 'createdAt'],
+      include: [
+        {
+          model: User,
+          attributes: ['username', 'avatar'],
+        },
+        {
+          model: Comment,
+          as: 'replies',
+          attributes: ['id', 'comment', 'rating', 'image', 'createdAt'],
+          include: [
+            {
+              model: User,
+              attributes: ['username', 'avatar'],
+            }
+          ]
+        }
+      ],
+    });
     
     const totalPages = Math.ceil(result.count / limit);
 
@@ -55,20 +70,11 @@ const getCommentByBarangId = async (req, res) => {
       });
     }
 
-    const comments = result.rows.map((comment) => {
-      return {
-        id: comment.id,
-        comment: comment.comment,
-        rating: comment.rating,
-        images: encodeURI(comment.image),
-        postBy: comment.user,
-      }
-    });
-    
-    res.status(200).json({
-      commments: comments,
+    return res.status(200).json({
+      code: 200,
+      commments: result.rows.map(CommentResponse),
       totalItems: result.count,
-      totalPages,
+      totalPages: totalPages,
       currentPage: parseInt(page),
     });
 

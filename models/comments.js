@@ -24,6 +24,10 @@ const Comment = sequelize.define("comments", {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
+  commentId: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+  },
 });
 
 Comment.belongsTo(User, { foreignKey: "userId" });
@@ -31,5 +35,7 @@ User.hasMany(Comment, { foreignKey: "userId" });
 
 Comment.belongsTo(Barang, { foreignKey: "barangId" });
 Barang.hasMany(Comment, { foreignKey: "barangId" });
+
+Comment.hasMany(Comment, { foreignKey: "commentId", as: "replies" });
 
 module.exports = Comment;

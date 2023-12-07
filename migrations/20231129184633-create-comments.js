@@ -7,7 +7,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       comment: {
         type: Sequelize.TEXT
@@ -44,7 +44,17 @@ module.exports = {
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
-      }
+      },
+      commentId: {
+        type: Sequelize.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'comments',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
+      },
     });
   },
   async down(queryInterface, Sequelize) {

@@ -4,6 +4,7 @@ const authenticatedJWT = require('../../../middleware/AuthenticatedJWT');
 const { getCommentByBarangId, postCommentByBarangId } = require('../../../controller/comment');
 const { singleImageUpload } = require('../../../middleware/ImageHandler');
 const { uploadToGcs } = require('../../../middleware/FileUpload');
+const { repliesUserComment, checkCommentIsExist, checkIsBarangOwner } = require('../../../controller/comment/replies');
 
 const router = express();
 
@@ -13,5 +14,15 @@ router.get("/barang/detail/:id", getBarangById);
 
 router.get("/barang/:id/comment", getCommentByBarangId);
 router.post("/barang/:id/comment", authenticatedJWT, singleImageUpload, uploadToGcs, postCommentByBarangId);
+
+router.post(
+  "/barang/:barangId/comment/:commentId/replies", 
+  authenticatedJWT, 
+  checkCommentIsExist,
+  checkIsBarangOwner,
+  singleImageUpload, 
+  //uploadToGcs,
+  repliesUserComment
+);
 
 module.exports = router;
