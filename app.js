@@ -58,8 +58,9 @@ app.post("/upload", singleImageUpload, uploadToGcs, async (req, res) => {
 
 app.use("/auth/google", require("./router/auth/google"));
 app.use("/auth", require("./router/auth/local"));
-app.use("/market", require("./router/market/barang"));
 app.use("/user", require("./router/user"));
+app.use("/market", require("./router/market/barang"));
+app.use("/market", require("./router/market/wishlist"));
 
 const port = process.env.port || 8080;
 

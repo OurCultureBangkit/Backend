@@ -38,7 +38,6 @@ const getAllBarang = async (req, res) => {
         attributes: ['username', 'id'],
       }],
     });
-
     const totalPages = Math.ceil(result.count / limit);
 
     if(result.rows.length === 0) {
@@ -56,7 +55,7 @@ const getAllBarang = async (req, res) => {
         harga: barang.harga,
         location: barang.location,
         stock: barang.stock,
-        images: JSON.parse(barang.image),
+        images: barang.image,
         postBy: barang.user,
       };
     });
@@ -97,7 +96,7 @@ const getBarangById = async (req, res) => {
       harga: result.harga,
       location: result.location,
       stock: result.stock,
-      images: JSON.parse(result.image),
+      images: result.image,
       postBy: result.user,
     };
 
@@ -114,8 +113,64 @@ const getBarangById = async (req, res) => {
   }
 }
 
+const getMyPostBarang = async (req, res) => {
+  try {
+    const { id } = req.user;
+    const { limit = 10, page = 1 } = req.query;
+    const offset = (page - 1) * limit;
+
+    const result = await Barang.findAndCountAll({
+      where: { userId: id },
+      limit: parseInt(limit),
+      offset: parseInt(offset),
+      include: [{
+        model: User,
+        attributes: ['username', 'id'],
+      }],
+    });
+
+    const totalPages = Math.ceil(result.count / limit);
+
+    if(result.rows.length === 0) {
+      return res.status(404).json({
+        code: 404,
+        message: "You not post any barang yet",
+      });
+    }
+
+    const barangs = result.rows.map((barang) => {
+      return {
+        id: barang.id,
+        title: barang.title,
+        description: barang.description,
+        harga: barang.harga,
+        location: barang.location,
+        stock: barang.stock,
+        images: barang.image,
+        postBy: barang.user,
+      };
+    });
+
+    res.status(200).json({
+      code: 200,
+      message: "Success get all barang",
+      barang: barangs,
+      totalItems: result.count,
+      totalPages,
+      currentPage: parseInt(page),
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ 
+      error: 'Internal Server Error' 
+    });
+  }
+}
+
 module.exports = {
   postBarang,
   getAllBarang,
-  getBarangById
+  getBarangById,
+  getMyPostBarang,
 }
