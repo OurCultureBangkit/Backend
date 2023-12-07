@@ -60,7 +60,7 @@ const getCommentByBarangId = async (req, res) => {
         id: comment.id,
         comment: comment.comment,
         rating: comment.rating,
-        images: comment.image,
+        images: encodeURI(comment.image),
         postBy: comment.user,
       }
     });

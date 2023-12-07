@@ -77,7 +77,7 @@ const getUserWishlist = async (req, res) => {
         harga: item.barang.harga,
         location: item.barang.location,
         stock: item.barang.stock,
-        image: item.barang.image,
+        image: encodeURI(item.barang.image),
       };
     });
 

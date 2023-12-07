@@ -1,5 +1,6 @@
 const User = require("../../models/Users");
 const Barang = require("../../models/barangs");
+const deleteFromGcs = require("../../modules/DeleteBucketFile");
 
 const postBarang = async (req, res) => {
   const { title, description, harga, location, stock } = req.body;
@@ -55,7 +56,7 @@ const getAllBarang = async (req, res) => {
         harga: barang.harga,
         location: barang.location,
         stock: barang.stock,
-        images: barang.image,
+        images: encodeURI(barang.image),
         postBy: barang.user,
       };
     });
@@ -96,7 +97,7 @@ const getBarangById = async (req, res) => {
       harga: result.harga,
       location: result.location,
       stock: result.stock,
-      images: result.image,
+      images: encodeURI(result.image),
       postBy: result.user,
     };
 
@@ -140,13 +141,13 @@ const getMyPostBarang = async (req, res) => {
 
     const barangs = result.rows.map((barang) => {
       return {
-        id: barang.id,
+        barangId: barang.id,
         title: barang.title,
         description: barang.description,
         harga: barang.harga,
         location: barang.location,
         stock: barang.stock,
-        images: barang.image,
+        images: encodeURI(barang.image),
         postBy: barang.user,
       };
     });
@@ -168,9 +169,73 @@ const getMyPostBarang = async (req, res) => {
   }
 }
 
+const deleteMyBarang = async (req, res) => {
+  try {
+    const { id: userId } = req.user;
+    const { barangId } = req.params;
+
+    const result = await Barang.findOne({
+      where: { id: barangId, userId: userId },
+    });
+
+    if (!result) {
+      return res.status(404).json({
+        code: 404,
+        message: "Barang not found",
+      });
+    }
+
+    const images = result.image;
+
+    try {
+      await Promise.all(
+        images.map(async (image) => {
+          const filename = image.split('/').pop();
+          console.log(`Deleting ${filename} from GCS`);
+          await deleteFromGcs(filename); 
+          console.log(`${filename} deleted from GCS`);
+        })
+      );
+
+      await Barang.destroy({
+        where: { id: barangId, userId: userId },
+      });
+
+      return res.status(200).json({
+        code: 200,
+        message: "Success delete barang",
+      });
+      
+    } catch (error) {
+
+      if(error.code === 404){
+        await Barang.destroy({
+          where: { id: barangId, userId: userId },
+        });
+  
+        return res.status(200).json({
+          code: 200,
+          message: "Success delete barang",
+        });
+      }
+
+      return res.status(500).json({
+        code: 500,
+        message: "Internal Server Error",
+      });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      error: "Internal Server Error",
+    });
+  }
+};
+
 module.exports = {
   postBarang,
   getAllBarang,
   getBarangById,
   getMyPostBarang,
+  deleteMyBarang,
 }
