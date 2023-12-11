@@ -61,6 +61,8 @@ app.use("/auth", require("./router/auth/local"));
 app.use("/user", require("./router/user"));
 app.use("/market", require("./router/market/barang"));
 app.use("/market", require("./router/market/wishlist"));
+app.use("/culture", require("./router/culture"));
+app.use("/ml", require("./router/ml"));
 
 const port = process.env.port || 8080;
 

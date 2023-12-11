@@ -11,11 +11,11 @@ const gcs = new Storage({
 });
 
 const deleteFromGcs = async (fileName) => {
-    const bucketName = process.env.bucketName;
-    const bucket = gcs.bucket(bucketName);
-    const file = bucket.file(fileName);
-  
-    await file.delete();
+  const bucketName = process.env.bucketName;
+  const bucket = gcs.bucket(bucketName);
+  const file = bucket.file(fileName);
+
+  await file.delete();
 }
 
 module.exports = deleteFromGcs;

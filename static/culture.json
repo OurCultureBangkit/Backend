@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Arit",
+    "description": "Sabit, arit, atau celurit adalah alat pertanian berupa pisau melengkung menyerupai bulan sabit. Meskipun bentuknya sama, secara bahasa arit dan sabit cenderung merujuk pada alat pertanian, sedangkan celurit pada senjata tajam. Dengan orang yang pekerjaan sehari-harinya menggunakan sabit sebagai alat utama adalah tukang arit. Arit bisa digunakan petani untuk memotong rumput.",
+    "source": "https://ban.wikipedia.org/wiki/Arit",
+    "image": "arit.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Golok",
+    "description": "Golok adalah pisau besar terbuat dari besi atau baja yang digunakan untuk membelah atau memotong. Golok kerap digunakan sebagai alat berkebun oleh masyarakat Indonesia. Hingga saat ini golok masih umum digunakan sebagai senjata dalam seni bela diri silat.",
+    "source": "https://id.wikipedia.org/wiki/Golok",
+    "image": "golok.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Angkep Pala",
+    "description": "Angkep Pala adalah aksesoris tari Bali yang dikenakan di bahu. Aksesoris ini terbuat dari kain bludru atau kain lainnya yang dihiasi dengan payet, benang emas, atau manik-manik. Angkep Pala biasanya dikenakan oleh penari topeng, tetapi juga dapat dikenakan oleh penari lainnya, seperti penari legong atau penari barong. Angkep Pala memiliki bentuk yang khas, yaitu berbentuk persegi panjang dengan bagian tengah yang lebih lebar. Bagian tengah Angkep Pala biasanya dihiasi dengan motif-motif tradisional Bali, seperti motif bunga, motif hewan, atau motif geometris. Angkep Pala memiliki makna simbolis yang penting dalam budaya Bali. Aksesoris ini melambangkan keanggunan, keindahan, dan kekuatan. Angkep Pala juga dipercaya dapat memberikan perlindungan bagi pemakainya. Angkep Pala biasanya dikenakan pada bagian bahu kiri atau kanan. Aksesoris ini dapat dikenakan secara berpasangan atau tidak. Angkep Pala dapat dikenakan oleh pria maupun wanita, tetapi lebih sering dikenakan oleh wanita. Angkep Pala dapat dibuat dengan berbagai macam bahan, tetapi bahan yang paling umum digunakan adalah kain bludru. Kain bludru dipilih karena memiliki tekstur yang lembut dan mengkilap, sehingga memberikan kesan yang elegan. Angkep Pala juga dapat dibuat dengan bahan-bahan lain, seperti kain sutra, kain katun, atau kain organdi. Angkep Pala adalah salah satu aksesoris tari Bali yang paling populer. Aksesoris ini tidak hanya memiliki nilai estetika yang tinggi, tetapi juga memiliki makna simbolis yang penting.",
+    "source": null,
+    "image": "angkep-pala.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Badong",
+    "description": "Badong, hiasan yang melingkar pada leher dan menutupi bapang. Badong ada dua jenis badong yang ukuranya agak besar biasanya digunakan oleh tokoh-tokoh raja besar, sedangkan badong yang berukuran kecil biasanya digunakan oleh tokoh-tokoh raja bawahan, patih dan lain-lainnya.",
+    "source": "Widnyana, Kompiang Gede. 'Nilai Simbolik Tata Rias Busana dalam Ranah Seni Pertunjukan.' Journal on Education 5.3 (2023): 8809-8816.",
+    "image": "badong.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Badong Kulit",
+    "description": "Badong kulit is a kalung tradisional Bali terbuat dari kulit, biasanya kulit sapi atau kambing. Sering dikenakan oleh penari Bali, khususnya penari wanita, memiliki makna budaya yang signifikan dan menambah unsur keindahan dan keanggunan pada pakaian mereka.",
+    "source": null,
+    "image": "badong-kulit.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Gelang Kana Kulit",
+    "description": "Gelang kana kulit adalah aksesoris tradisional Bali yang terbuat dari kulit sapi atau kambing. Gelang ini biasanya dikenakan oleh penari Bali, terutama penari wanita. Gelang kana kulit memiliki bentuk yang khas, yaitu berbentuk persegi panjang dengan bagian tengah yang lebih lebar. Bagian tengah gelang ini biasanya dihiasi dengan motif-motif tradisional Bali, seperti motif ukiran, motif kain, atau motif hiasan logam. Gelang kana kulit memiliki makna simbolis yang penting dalam budaya Bali. Gelang ini melambangkan kekuatan, keanggunan, dan kemurnian. Gelang ini juga dipercaya dapat memberikan perlindungan bagi pemakainya. Gelang kana kulit biasanya dikenakan pada bagian lengan atas, tepat di bawah siku. Gelang ini biasanya dikenakan secara berpasangan, yaitu satu gelang di lengan kiri dan satu gelang di lengan kanan. Gelang kana kulit dapat dikenakan oleh pria maupun wanita, tetapi lebih sering dikenakan oleh wanita. Gelang kana kulit dapat dibuat dengan berbagai macam bahan, tetapi bahan yang paling umum digunakan adalah kulit sapi atau kambing. Bahan-bahan ini dipilih karena memiliki tekstur yang lembut dan lentur, sehingga nyaman dikenakan. Gelang kana kulit juga dapat dibuat dengan bahan-bahan lain, seperti kain, logam, atau plastik. Gelang kana kulit adalah salah satu aksesoris tradisional Bali yang paling populer. Gelang ini tidak hanya memiliki nilai estetika yang tinggi, tetapi juga memiliki makna simbolis yang penting.",
+    "source": null,
+    "image": "gelang-kana-kulit.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Keris Cuntrik",
+    "description": "Keris Cuntrik adalah versi kecil, sering kali miniatur, versi keris tradisional Jawa, belati suci yang memiliki makna budaya dan spiritual. Biasanya berukuran panjang antara 5 hingga 15 sentimeter, ia menampilkan desain bilah bergelombang dan pengerjaan yang rumit. Asal muasal Keris Cuntrik secara pasti belum diketahui sepenuhnya, namun diyakini muncul pada abad ke-16 atau setelahnya. Ukurannya yang kecil menjadikannya senjata yang nyaman dan bijaksana untuk pertahanan diri, terutama bagi perempuan yang sering memakainya di dalam selendang atau kemben (kain dada).",
+    "source": null,
+    "image": "keris-cuntrik.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Keris Lurus",
+    "description": "Keris lurus, melambangkan keteguhan hati dan kekuatan iman, sekaligus melambangkan tauhid yakni Kepercayaan terhadap Kekuasaan Tuhan Yang Maha Esa. Contoh dhapur lurus: Betok, Brojol, Tilam, Jalak, Semar Betak, Cundrik, Cengkrong, Kalamisani, Kala Nadah, Kala Dete, Mahesa Kantong.",
+    "source": null,
+    "image": "keris-lurus.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Keris Lurus Batok Budo",
+    "description": "Keris Lurus Batok Budo adalah salah satu jenis keris Jawa yang memiliki bilah lurus. Keris ini berasal dari daerah Bantul, Yogyakarta, dan dikenal dengan pamornya yang unik, yaitu pamor Batok Budo.",
+    "source": null,
+    "image": "keris-batok-budo.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Keris Luk Lima",
+    "description": "Keris luk 5, melambangkan permohonan kepada Tuhan agar pemilik keris memiliki sifat-sifat seperti Pandawa Lima. Yudhistira yang tekun beribadah dan jujur, Bima yang setia dan perkasa, Arjuna yang lemah lembut dan sakti, Nakula yang pandai berdagang/berwirausaha, Sadewa yang pandai beternak/berolah pertanian dan dapat memberikan saran/masukan. Contoh dhapur luk lima: Pandawa, Pulanggeni, Anoman, Urap-urap, Bakung, Rara Siduwa, Sinarasah.",
+    "source": null,
+    "image": "keris-luk-lima.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Keris Luk Sebelas",
+    "description": "Melambangkan permohonan kepada Tuhan agar pemilik keris memiliki ikatan yang kuat dalam usaha meraih kedudukan, meraih ilmu pengetahuan, meraih kemapanan ekonomi. Contoh dhapur luk sebelas: Sempana, Bandhotan, Carita, Sabuk Inten, Sabuk Sela, Sabuk Tali, Santan, Waluring.",
+    "source": null,
+    "image": "keris-luk-sebelas.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Mask Bujuh",
+    "description": "Mask Bujuh adalah topeng tradisional dari Pulau Bangka, Provinsi Kepulauan Bangka Belitung. Mask Bujuh terbuat dari kayu dan memiliki bentuk yang khas, yaitu berbentuk kepala monyet dengan mulut yang terbuka lebar. Mask Bujuh biasanya digunakan dalam pertunjukan seni tradisional Bangka, seperti pertunjukan tari dan drama.",
+    "source": null,
+    "image": "bujuh.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Mask Dalem",
+    "description": "Mask Dalem adalah topeng tradisional Bali yang menggambarkan sosok raja atau penguasa. Mask Dalem biasanya terbuat dari kayu dan memiliki bentuk yang khas, yaitu berbentuk kepala manusia dengan wajah yang tenang dan bijaksana. Mask Dalem biasanya digunakan dalam pertunjukan seni tradisional Bali, seperti pertunjukan tari dan drama.",
+    "source": null,
+    "image": "dalem.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Mask Keras",
+    "description": "Mask keras adalah topeng yang terbuat dari bahan keras, seperti kayu, batu, atau logam. Mask keras biasanya digunakan dalam pertunjukan seni tradisional, seperti pertunjukan tari dan drama.Mask keras merupakan salah satu warisan budaya yang harus dilestarikan. Mask keras merupakan bagian dari kekayaan budaya Indonesia yang harus dijaga dan dibanggakan.",
+    "source": null,
+    "image": "mask-keras.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Mask Penasar",
+    "description": "Mask Penasar adalah topeng tradisional dari Bali yang menggambarkan sosok raksasa atau makhluk mitologi. Mask Penasar biasanya terbuat dari kayu dan memiliki bentuk yang khas, yaitu berbentuk kepala raksasa dengan wajah yang garang dan menyeramkan. Mask Penasar biasanya digunakan dalam pertunjukan seni tradisional Bali, seperti pertunjukan tari dan drama.",
+    "source": null,
+    "image": "penasar.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Topeng Sidakarya",
+    "description": "Topeng Sidakarya adalah salah satu jenis tari yang ada di dalam tari topeng Bali. Sidakarya berasal dari kata 'sida' yang artinya mencapai, dan 'karya' yang artinya tujuan atau pekerjaan. Sidakarya memiliki makna mencapai tujuan atau menyelesaikan pekerjaan. Topeng Sidakarya menjadi lambang bahwa pekerjaan atau karya yang digelar sudah selesai dengan baik. Tari topeng Sidakarya merupakan tarian pelengkap pada upacara Yadnya di Bali. Tari topeng ditampilkan sebagai tari persembahan (wewalen) sebelum acara pemujaan bersama. Tujuannya, agar upacara yang berlangsung dapat terselenggara dengan baik dan selamat serta terhindar dari segala bahaya. Pada akhir tari ini secara simbolis penari menghamburkan uang kepeng dan beras kuning (sekarura) sebagai lambang pemberian berkat kesempurnaan dan kemakmuran.",
+    "source": null,
+    "image": "sidakarya.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Topeng Tua",
+    "description": "Topeng Tua adalah salah satu jenis topeng yang digunakan dalam tari topeng. Topeng Tua merefleksikan pria tua yang berusia senja. Koreografi yang dibawakan penari menggambarkan sang pria tua sedang terkenang akan masa mudanya. Sebagai tari yang memiliki nilai kesakralan, tari topeng tua biasanya dipentaskan dalam ritual peringatan piodalan. Pada peringatan ini, tari topeng tua akan dipentaskan bersama dengan jenis tari topeng lainnya yang menjadi satu kesatuan dengan sebutan topeng panca. Topeng panca terdiri dari topeng tua, topeng dalem, topeng keras, topeng keras bues, dan topeng penasar. Selain menjadi bagian dari topeng panca, tari topeng tua juga ditampilkan sebagai pembuka tari sakral lainnya, yaitu tari topeng pajegan. Tari topeng pajegan hanya dipertunjukan pada upacara keagamaan. Pada tari pajegan, semua tokoh yang ada dalam pertunjukan dibawakan oleh seorang penari. Sang penari akan memerankan tokoh-tokoh berbeda dengan tampilan topeng, penutup kepala, serta gestur yang berbeda.",
+    "source": null,
+    "image": "topeng-tua.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Topen Wijil",
+    "description": "Topeng Wijil adalah topeng yang digunakan untuk memerankan sebuah abdi dalam suatu kerajaan. Di dalam memerankan tokoh ini seorang penari di tuntut untuk menguasai ajaran- ajaran tentang agama serta mampu memberikan makna-makna tentang nilai-nilai kehidupan, cerminan tentang kehidupan, etika, moral, serta sesuluh. Dalam menyampaikan sebuah cerita, tokoh ini selalu penuh dengan penyampaian yang sopan dan santun dalam bertutur kata. Karakter ini mengajarkan bagaimana kita bersikap atau berprilaku terhadap seseorang yang lebih tua serta hubungan antar sesama. Selain itu, tokoh ini mengajarkan untuk berpegang teguh terhadap ajaran-ajaran agama.",
+    "source": null,
+    "image": "wijil.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Tombak",
+    "description": "Tombak adalah salah satu senjata tradisional Bali yang merupakan senjata perang kuno di budaya Bali. Tombak dipergunakan sebagai senjata maupun kelengkapan upacara adat. Senjata tombak ditampilkan dalam tarian Bali yang disebut tari Wirayuda. Tarian ini merupakan tarian perang yang dibawakan oleh 2 sampai 4 orang penari yang menggambarkan sekelompok prajurit Dwipa Bali bersiap untuk maju ke medan perang. Selain ditampilkan dalam tari Wirayuda, senjata tombak banyak digunakan juga pada upacara-upacara adat dan pertunjukan lain.",
+    "source": null,
+    "image": "tombak.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Wayang Arjuna",
+    "description": "Wayang Arjuna adalah nama seorang tokoh protagonis dalam wiracarita Mahabharata. Arjuna adalah anak ketiga dari lima bersaudara yang disebut Pandawa. Ia adalah putra Prabu Pandu, raja di Hastinapura dengan Kunti. Ia dikenal sebagai anggota Pandawa yang berparas menawan dan berhati lemah lembut. Misinya adalah melawan kejahatan dan menjunjung tinggi kebajikan. Dia adalah pahlawan dalam pertempuran yang tak kenal takut namun halus. Arjuna sangat pandai dalam ilmu memanah. Di dalam cerita, Arjuna adalah teman dekat Kresna, yang disebut dalam kitab Purana sebagai penjelmaan Dewa Wisnu. Karena hubungan yang sangat erat itu, Arjuna meminta kesediaan Kresna sebagai penasihat sekaligus kusir kereta Arjuna saat perang antara Pandawa dan Korawa berkecamuk (Bharatayuddha). Dialog antara Kresna dan Arjuna sebelum perang Bharatayuddha berlangsung terangkum dalam suatu kitab tersendiri yang disebut Bhagawadgita, yang secara garis besar berisi wejangan suci yang disampaikan oleh Kresna karena Arjuna mengalami keragu-raguan untuk menunaikan kewajibannya sebagai seorang kesatria di medan perang.",
+    "source": null,
+    "image": "arjuna.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Wayang Bagong",
+    "description": "Wayang Bagong adalah adalah nama dari salah satu tokoh Punakawan dalam kisah pewayangan. Sebagai seorang panakawan yang sifatnya menghibur penonton wayang, tokoh Bagong pun dilukiskan dengan ciri-ciri fisik yang mengundang kelucuan. Tubuhnya bulat, matanya lebar, bibirnya tebal. Bangong memiliki sifat yang jenaka dan sembrono. Gaya bicara Bagong terkesan semaunya sendiri. Dibandingkan dengan ketiga panakawan lainnya, yaitu Semar, Gareng, dan Petruk, Bagong adalah sosok yang paling lugu dan kurang mengerti tata krama. Dalam figur wayang kulit, Bagong membawa senjata kudi.",
+    "source": null,
+    "image": "bagong.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Wayang Bathara Surya",
+    "description": "Wayang Bathara Surya adalah dewa putra Semar yang diberi kekuasaan untuk mengatur matahari. Ia bergerak mengelilingi bumi dengan mengendarai kereta yang ditarik oleh tujuh kuda dan seorang kusir bernama Aruna. Bathara Surya menjadi sumber energi bagi kehidupan semua makhluk di muka bumi terutama tumbuhan dan hewan. Bathara Surya terkenal sangat sakti mandraguna dan menjadi salah satu dewa andalan di kahyangan. Ia terkenal senang memberikan pusaka-pusaka atau ajian-ajian yang dimilikinya terhadap orang-orang yang dipilihnya.",
+    "source": null,
+    "image": "surya.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Wayang Bathara Wisnu",
+    "description": "Wayang Bathara Wisnu adalah tokoh dewa yang bergelar sebagai shtiti (pemelihara) yang bertugas memelihara dan melindungi segala ciptaan Brahman. Ia adalah dewa keadilan atau kesejahteraan. Badannya berkulit hitam sebagai lambang keabadian. Bathara Wisnu adalah putra kelima Sang Hyang Manikmaya, raja Tribuana, dengan Dewi Umayi. Ia mempunyai lima saudara kandung bernama Bathara Sambo, Bathara Brahma, Bathara Indra, Bathara Bayu dan Bathara Kala. Bathara Wisnu juga mempunyai tiga orang saudara seayah lain ibu, yaitu Bathara Cakra, Bathara Mahadewa dan Bathara Asmara. Ia memiliki pusaka bernama Kembang Wijayakusuma dan Cangkok Wijayamulya. Ia memiliki tunggangan berupa seekor garuda raksasa bernama Bhirawan. Karena sayang pada burung garuda tunggangannya itu, Bhirawan lalu dipungut sebagai menantu, dikawinkan dengan salah seorang putrinya yang bernama Dewi Kastapi.",
+    "source": null,
+    "image": "wisnu.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Wayang Gareng",
+    "description": "Wayang Gareng adalah seorang tokoh Punakawan yang memiliki tubuh yang kurang sempurna dengan hidung bulat, tangan patah, kaki pincang, dan mata yang juling. Sosok Gareng diartikan sebagai pesan untuk berhati-hati dalam bertindak dan tidak mengambil milik orang lain. Dulunya, Gareng berwujud satria tampan bernama Bambang Sukodadi dari padepokan Bluluktiba. Gareng sangat sakti namun sombong, sehingga selalu menantang setiap satria yang ditemuinya. Suatu hari, ia berjumpa dengan satria lain bernama Bambang Panyukilan. Karena suatu kesalahpahaman, mereka malah berkelahi. Karena perkelahian itu, wajah mereka berdua rusak. Tokoh Gareng dalam Punakawan memiliki dasanama atau nama lain seperti Nala Gareng, Pancalpanor, dan Pegatwaja. Dalam cerita pewayangan, Gareng diceritakan sebagai anak sulung Semar.",
+    "source": null,
+    "image": "gareng.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Wayang Nakula",
+    "description": "Wayang Nakula adalah seorang tokoh protagonis dalam wiracarita Mahabharata. Ia adalah anak keempat dari lima Pandawa bersaudara. Ia memiliki saudara kembar yang bernama Sahadewa atau Sadewa. Nakula merupakan putra Prabu Pandu Dewanata dengan Dewi Madrim. Saat lahir ayahnya telah tiada karena terkena kutukan seorang resi yang dulu pernah dibunuh Pandu. Dewi Madrim ikut bakar diri saat prosesi pembakaran jenazah suaminya. Akhirnya Nakula dan Sadewa diasuh oleh Dewi Kunthi. Nakula merupakan satria yang rupawan dan ahli dalam berperang. Ia juga terkenal karena keahliannya dalam menunggangi kuda. Sayangnya, ia adalah sosok yang terlalu bangga dengan ketampanannya dan tidak mau mengalah.",
+    "source": null,
+    "image": "nakula.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Wayang Petruk",
+    "description": "Wayang Petruk adalah salah satu tokoh punakawan dalam pewayangan. Ia adalah anak Raja Gandarwa, seorang raksasa yang bertempat di dalam laut yang bernama Begawan Salantara. Sebelumnya ia bernama Bambang Pecruk Panyukilan. Ia gemar bersenda gurau, baik dengan ucapan maupun tingkah laku dan senang berkelahi. Ia seorang yang sakti di tempat kediamannya dan daerah sekitarnya. Oleh karena itu ia ingin berkelana guna menguji kekuatan dan kesaktiannya. Di tengah jalan ia bertemu dengan Bambang Sukodadi dari pertapaan Bluluktiba. Karena mempunyai maksud yang sama, maka terjadilah perang tanding. Mereka berkelahi sangat lama sampai tubuh mereka menjadi cacat dan berubah dari wujud aslinya yang tampan. Perkelahian ini kemudian dipisahkan oleh Semar dan Bagong. Karena perubahan wujud tersebut maka masing-masing kemudian berganti nama. Bambang Pecruk Panyukilan menjadi Petruk, sedangkan Bambang Sukodadi menjadi Gareng.",
+    "source": null,
+    "image": "petruk.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Wayang Sadewa",
+    "description": "Wayang Sadewa adalah salah satu tokoh utama dalam wiracarita Mahabharata. Ia merupakan anggota Pandawa yang paling muda, yang memiliki saudara kembar bernama Nakula. Meskipun kembar, Nakula dikisahkan memiliki wajah yang lebih tampan daripada Sadewa, sedangkan Sadewa lebih pandai. Sadewa dan Nakula lahir dari rahim Madrim. Sementara itu ketiga kakak mereka, yaitu Yudistira, Bimasena, dan Arjuna lahir dari rahim Kunti. Meskipun demikian, Sadewa dikisahkan sebagai putra yang paling disayangi Kunti. Meskipun Sadewa merupakan Pandawa yang paling muda, tetapi ia dianggap sebagai yang terbijak di antara mereka. Yudistira bahkan pernah berkata bahwa Sadewa lebih bijak daripada Wrehaspati, guru para dewa. Sadewa merupakan ahli perbintangan, matahari, air, dan strategi perang. Langkahnya bagaikan air keruh menjadi benih sebening wibawanya, matanya seindah matahari, bintang dan bulan bagaikan kekasihnya yang menerangi di gelap, dan wajahnya berseri bagaikan laki laki bertanggung jawab.",
+    "source": null,
+    "image": "sadewa.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Wayang Semar",
+    "description": "Wayang Semar adalah tokoh utama dalam Punakawan dalam cerita pewayangan. Ia dikisahkan sebagai pengasuh sekaligus penasihat para kesatria dalam pementasan wiracarita Mahabharata dan Ramayana. Dalam pewayangan, Semar selalu disertai oleh anak-anaknya, yaitu Gareng, Petruk, dan Bagong. Namun sesungguhnya ketiganya bukan anak kandung Semar. Gareng adalah putra seorang pendeta yang mengalami kutukan dan terbebas oleh Semar. Petruk adalah putra seorang raja bangsa Gandharwa yaitu Prabu Gandarwarajabali. Sementara Bagong tercipta dari bayangan Semar berkat sabda sakti Sang Hyang Wenang. Semar memiliki bentuk fisik yang sangat unik, seolah-olah ia merupakan simbol penggambaran jagad raya. Tubuhnya yang bulat merupakan simbol dari bumi. Semar selalu tersenyum tetapi bermata sembab yang memiliki simbol suka dan duka. Wajahnya tua tetapi potongan rambutnya bergaya kuncung seperti anak kecil, sebagai simbol tua dan muda. Ia berkelamin laki-laki, tetapi memiliki payudara seperti perempuan, sebagai simbol pria dan wanita. Ia penjelmaan dewa tetapi hidup sebagai rakyat jelata, sebagai simbol atasan dan bawahan.",
+    "source": null,
+    "image": "semar.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Wayang Werkudara",
+    "description": "Wayang Werkudara adalah seorang tokoh protagonis dalam wiracarita Mahabharata. Ia adalah anak kedua dari lima Pandawa bersaudara, putra dari Pandu Dewanata dan Dewi Kunti. Ia juga memiliki seorang saudara seayah yaitu Hanoman, wanara terkenal dalam epos Ramayana. Werkudara dikenal sebagai tokoh Pandawa yang kuat, selalu bersifat kasar, menakutkan bagi musuh, walaupun sebenarnya berhati lembut. Ia memiliki sifat gagah berani, tabah, patuh, jujur, bijaksana, serta menganggap semua orang sama derajatnya, sehingga dia digambarkan tidak pernah menggunakan bahasa halus ataupun duduk di depan lawan bicaranya. Ia hanya berbicara dengan bahasa halus dan duduk ketika menjadi seorang resi dalam lakon Bima Suci dan ketika dia bertemu dengan Dewaruci. Ia mahir bermain gada, serta memiliki berbagai macam senjata dan ajian. Dalam pencarian jati dirinya, Werkudara sering diberi tugas oleh gurunya yang terasa mustahil untuk dikerjakan, seperti mencari kayu gung susuhing angin dan banyu perwitasari, yang akhirnya membawa Werkudara bertemu dengan Dewaruci.",
+    "source": null,
+    "image": "werkudara.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Wayang Yudistira",
+    "description": "Wayang Yudistira adalah salah satu tokoh protagonis dalam wiracarita Mahabharata. Ia adalah putra pertama pasangan Pandu dan Kunti, sehingga Ia adalah yang tertua di antara lima Pandawa. Pada masa pendidikan, para Pandawa mempelajari ilmu agama, hukum, dan tata negara kepada Resi Krepa. Dalam pendidikan tersebut, Yudistira tampil sebagai murid yang paling pandai. Setelah itu, Pandawa berguru ilmu perang kepada Resi Drona. Dalam pendidikan kedua ini, Yudistira terampil dalam menggunakan senjata tombak. Yudistira merupakan seorang raja yang memerintah kerajaan Kuru, dengan pusat pemerintahan di Hastinapura. Dalam tradisi pewayangan, Yudistira diberi gelar prabu dan memiliki julukan Puntadewa, sedangkan kerajaannya disebut dengan nama Kerajaan Amarta.",
+    "source": null,
+    "image": "yudistira.jpg"
+  }
+]

@@ -19,8 +19,10 @@ const postCommentByBarangId = async (req, res) => {
       barangId: parseInt(id),
     });
 
-    res.status(200).json({
-      data: result,
+    res.status(201).json({
+      code: 201,
+      error: false,
+      comments: result,
       message: "Success post comment",
     });
 
