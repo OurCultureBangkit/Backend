@@ -10,7 +10,7 @@ const predictionImage = async (req, res) => {
     formData.append("image", file.buffer, file.originalname);
 
     const response = await axios.post(
-      "https://model-ourculture-ojy22lhfsq-as.a.run.app/ml/vision",
+      process.env.MACHINE_LEARNING_URL,
       formData, 
       {
         headers: {
