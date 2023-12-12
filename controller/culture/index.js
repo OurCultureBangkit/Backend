@@ -56,7 +56,36 @@ const getCultureById = async (req, res) => {
   }
 }
 
+const addCulture = async (req, res) => {
+  try {
+    const { name, description, source } = req.body;
+    const { files } = req;
+
+    const images = files ? files.map((file) => file.cloudStoragePublicUrl) : null;  
+
+    const culture = await Cultures.create({
+      name: name,
+      description: description,
+      source: source,
+      image: images,
+    });
+
+    res.status(201).json({
+      code: 201,
+      message: "Success add culture",
+      data: culture,
+    });
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({
+      message: "Internal server error" 
+    });
+  }
+}
+
 module.exports = {
   getAllCulture,
-  getCultureById
+  getCultureById,
+  addCulture,
 };
