@@ -62,6 +62,38 @@ Running in production:
 npm start
 ```
 
+Before migrating database and seeding data, make sure to install sequelize-cli globally:
+
+```bash
+npm install -g sequelize-cli
+```
+
+Make sure to set /config/config.json file to your database configuration.
+
+Migrating database in development mode:
+
+```bash
+npx sequelize-cli db:migrate --env development
+```
+
+Migrating database in production mode:
+
+```bash
+npx sequelize-cli db:migrate --env production
+```
+
+Seeding data in development mode:
+
+```bash
+npx sequelize-cli db:seed:all --env development
+```
+
+Seeding data in production mode:
+
+```bash
+npx sequelize-cli db:seed:all --env production
+```
+
 ## Environment Variables
 
 The environment variables can be found and modified in the `.env` file.
@@ -122,14 +154,14 @@ List of available routes:
 `POST auth/google/login` - Google Login checkpoint\
 `POST auth/google/logout` - Google Logout Checkpoint\
 `POST auth/login` - Local Login\
-`POST auth/register` - Local Register\
+`POST auth/register` - Local Register
 
 **User routes**:\
 `GET user/whoami` - Get now login profile user\
 `GET user/:username` - Get user profile by username\
 `PUT user/change-password` - change user password\
 `GET user/market/barang` - Get now login user post barang\
-`DELETE user/market/barang/:barangId` - Delete now login user post barang\
+`DELETE user/market/barang/:barangId` - Delete now login user post barang
 
 **Barang routes**:\
 `POST market/barang` - PostBarang\
@@ -138,20 +170,20 @@ List of available routes:
 
 `GET market/barang/:id/comment` - GetCommentByBarangId\
 `POST market/barang/:id/comment` - PostCommentByBarangId\
-`POST /barang/:barangId/comment/:commentId/replies` - Reply comment\
+`POST /barang/:barangId/comment/:commentId/replies` - Reply comment
 
 **Wishlist routes**:\
 `GET market/wishlist` - Get all user wishlist\
 `POST market/wishlist` - Add barang to user wishlist\
-`DELETE market/wishlist` - Delete barang from user wishlist\
+`DELETE market/wishlist` - Delete barang from user wishlist
 
 **Culture routes**:\
 `GET culture` - Get all culture\
 `GET culture/:id` - Get culture by id\
-`POST culture` - Post culture only admin\
+`POST culture` - Post culture only admin
 
 **Machine Learning routes**:\
-`GET ml/vision` - Get vision result\
+`GET ml/vision` - Get vision result
 
 ## License
 
