@@ -37,25 +37,6 @@ app.get("/", async (_, res) => {
   res.send("hello world");
 });
 
-app.get("/protected", authenticatedJWT, (req,res) => {
-  res.status(200).json({
-    message: "This is a protected route",
-    profile: req.user
-  });
-})
-
-app.post("/upload", singleImageUpload, uploadToGcs, async (req, res) => {  
-  const { file } = req;
-  
-  res.status(200).json({
-    message: "File uploaded successfully",
-    data: {
-      name: file.originalname,
-      url: file.cloudStoragePublicUrl
-    }
-  });
-});
-
 app.use("/auth/google", require("./router/auth/google"));
 app.use("/auth", require("./router/auth/local"));
 app.use("/user", require("./router/user"));
